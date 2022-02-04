@@ -10,25 +10,125 @@
   <link rel="stylesheet" href="dist/audition.css">
 
   <meta name="theme-color" content="#fafafa">
+  <style>
+
+    :root {
+      --primary-color: #5A9CFF;
+    }
+    .warning-note {
+      margin-left: 30px;
+      color: #EC7777;
+    }
+    .container {
+      max-width: 1400px;
+      background-color: #FBFCFE;
+      border-radius: 4px;
+      padding: 150px 0;
+    }
+    .cta-tile {
+      background-color: #fff;
+      padding: 15px;
+      max-width: 1150px;
+      /* width: 90vw; */
+      margin: 100px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cta-tile__content-holder {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cta-tile__registry-message {
+      color: #000;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .cta-tile__registry-message .emphasis-span {
+      font-weight: 600;
+    }
+    .cta-tile__button-holder {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 10px;
+      margin: 20px 0;       
+    }
+    button {
+      background-color: #fff;
+      color: var(--primary-color);
+      height: 53px;
+      border: 2px solid var(--primary-color);
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: .9rem;
+    }
+    .cta-tile__share-button {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    @media (min-width: 620px) {
+      .container {
+        /* font-size: 1.1rem; */
+        letter-spacing: -.1px;
+      }
+      .cta-tile {
+        max-width: 90%;
+      }
+      .cta-tile__content-holder {
+        flex-direction: column;
+        align-items: unset;
+        width: 90%;
+      }
+    
+      .cta-tile__button-holder {
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+      }
+      button {
+        flex-basis: 156px;
+      }
+    }
+    @media (min-width: 1100px) {
+      .cta-tile__content-holder {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+      }
+      .cta-tile__button-holder {
+        justify-content: flex-end;        
+      }
+      button {
+        flex-basis: 140px;
+      }
+    }
+
+
+  </style>
 </head>
 
 <body>
 
   <!-- Add your site or application content here -->
   <div class="container">
-
-    <div class="row">
-      <div class="col">
-        <section>
-          <div>
-            <p>Great! Your registry is published and ready to be shared.</p>
-            <a href="/">Share</a>
-            <a href="/">Preview</a>
-            <a href="/">Edit</a>
-          </div>
-        </section>
+    <p class="warning-note">Note: Muli font currently not available on Google Fonts distribution</p>
+    <p class="warning-note">Note: Content of CTA information differs from desktop to tablet & mobile</p>
+    <p class="warning-note">Note: Larger discussion on limitations of static mockup in <a href="./readme.md">readme.md</a></p>
+    <section class="cta-tile">
+      <div class="cta-tile__content-holder">
+        <p class="cta-tile__registry-message"><span class="emphasis-span">Great!</span> Your registry is published and ready to be shared.</p>
+        <div class="cta-tile__button-holder">
+          <button class="cta-tile__share-button">Share</button>
+          <button class="cta-tile__preview-button">Preview</button>
+          <button class="cta-tile__edit-button">Edit</button>
+        </div>
       </div>
-    </div>
+    </section>
 
   </div>
 

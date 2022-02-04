@@ -1,3 +1,7 @@
 // Bootstrap
 @import "vendor/bootstrap/scss/bootstrap.scss";
 
+
+button {
+    background-color: var(--primary);
+}
