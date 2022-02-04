@@ -259,3 +259,9 @@ node_modules/strip-json-comments/index.js
 node_modules/strip-json-comments/license
 node_modules/strip-json-comments/package.json
 node_modules/strip-json-comments/readme.md
+node_modules/.bin/cross-env
+node_modules/.bin/cross-env-shell
+node_modules/.bin/detect-libc
+node_modules/.bin/needle
+node_modules/.bin/node-pre-gyp
+node_modules/.bin/rc
